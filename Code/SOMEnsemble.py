@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu Mar 18 00:29:29 2021
 
-@author: rashidahasan
-"""
 
 import SOMGit as sm
 import classifier as cl
