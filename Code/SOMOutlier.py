@@ -48,3 +48,26 @@ gnb = GaussianNB()
 gnb.fit(X_train, y_train)
 y_pred_nb=gnb.predict(X_test)
 print("Accuracy NB after noise remove:",metrics.accuracy_score(y_test, y_pred_nb))
+
+Knn = KNeighborsClassifier(n_neighbors=3)
+Knn.fit(X_train, y_train)
+y_pred_Knn=Knn.predict(X_test)
+print(" KNN Accuracy:",metrics.accuracy_score(y_test, y_pred_Knn))
+
+'''''''''''
+
+RF = RandomForestClassifier(max_depth=2, random_state=0)
+RF.fit(X_train, y_train)
+y_pred_RF=RF.predict(X_test)
+print(" RF Accuracy:",metrics.accuracy_score(y_test, y_pred_RF))
+
+
+
+SV=svm.SVC()
+SV.fit(X_train, y_train)
+y_pred_SV=SV.predict(X_test)
+print(" SVM Accuracy:",metrics.accuracy_score(y_test, y_pred_SV))
+
+'''''''''''''''''
+
+
