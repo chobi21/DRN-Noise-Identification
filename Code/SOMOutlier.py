@@ -54,7 +54,7 @@ Knn.fit(X_train, y_train)
 y_pred_Knn=Knn.predict(X_test)
 print(" KNN Accuracy:",metrics.accuracy_score(y_test, y_pred_Knn))
 
-'''''''''''
+
 
 RF = RandomForestClassifier(max_depth=2, random_state=0)
 RF.fit(X_train, y_train)
@@ -68,6 +68,5 @@ SV.fit(X_train, y_train)
 y_pred_SV=SV.predict(X_test)
 print(" SVM Accuracy:",metrics.accuracy_score(y_test, y_pred_SV))
 
-'''''''''''''''''
 
 
