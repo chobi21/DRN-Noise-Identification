@@ -13,6 +13,9 @@ from sklearn import metrics
 from sklearn.metrics import plot_confusion_matrix
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn import svm
 
 dataset=pd.read_csv("/pathname/Dataset Name.csv", sep=',',header=None)
 dataset = dataset.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
