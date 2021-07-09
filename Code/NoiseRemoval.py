@@ -3,6 +3,7 @@
 
 
 
+
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -14,6 +15,8 @@ from sklearn import metrics
 from sklearn.metrics import plot_confusion_matrix
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import RandomForestClassifier
 
 dataset=pd.read_csv("/pathname/Dataset Name.csv", sep=',',header=None)
 dataset = dataset.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
@@ -46,3 +49,18 @@ gnb = GaussianNB()
 gnb.fit(X_train, y_train)
 y_pred_nb=gnb.predict(X_test)
 print("Accuracy NB after noise remove:",metrics.accuracy_score(y_test, y_pred_nb))
+
+Knn = KNeighborsClassifier(n_neighbors=3)
+Knn.fit(X_train, y_train)
+y_pred_Knn=Knn.predict(X_test)
+#print(" KNN Accuracy:",metrics.accuracy_score(y_test, y_pred_Knn))
+
+RF = RandomForestClassifier(max_depth=2, random_state=0)
+RF.fit(X_train, y_train)
+y_pred_RF=RF.predict(X_test)
+#print(" RF Accuracy:",metrics.accuracy_score(y_test, y_pred_RF))
+
+SV=svm.SVC()
+SV.fit(X_train, y_train)
+y_pred_SV=SV.predict(X_test)
+print(" SVM Accuracy:",metrics.accuracy_score(y_test, y_pred_SV))
