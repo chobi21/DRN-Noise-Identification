@@ -16,6 +16,7 @@ var=0.1
 sigma=var**0.5
 
 X1=np.random.normal(mean,sigma, X.shape)
-data=np.column_stack([X1,y])
+X2=X+X1
+data=np.column_stack([X2,y])
 
 np.savetxt("/pathname/DatasetNameNoisy.csv", data,delimiter=",")
